@@ -14,13 +14,13 @@ Struture:
 
 
 
-- Pods: (Pods are a group of one or more containers (Dockers containers for example))
+- Pods: (Pods are a group of one or more containers (Docker containers for example))
   - Containers within a pod share an IP address and port space and can find eachother on localhost.
   - Containers can also communicate using IPC (SysV semaphores, POSIX shared mem).
   - Containers in different pods have distinct IP addresses and can't communicate with IPC without special configuration.
   - Containers from different pods usually communicate with eachother using the IP addresses of each pod
   - Applications in a pod have access to shared volumes, which are part of the pod and can be mounted by each app.
-  - In Docker terms, a pod is modelled like a group of Doker containers with shared namespaces and shared FS volumes.
+  - In Docker terms, a pod is modelled like a group of Docker containers with shared namespaces and shared FS volumes.
   
   - Pod Example:
     - A pod with two containers, one container pulls files and stores them on a shared volume between the two containers.
@@ -29,4 +29,7 @@ Struture:
 - Why not just run multiple apps within one docker?
   - Transparency! Making the containers within the pod visible to infrastructure enable the ability to provide services to those
     containers such as process management and resource monitoring.
+  - Decoupling software dependencies. Individual containers can be versioned, rebuilt and redeployed inependently.
+  - Users dont need to worry about watching app signals or run their own process managers.
+  - Efficiency. Because the containers are not holdng all the responsibility they can be lightweight.
   

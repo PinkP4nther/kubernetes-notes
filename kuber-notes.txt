@@ -1,0 +1,21 @@
+- Kubernetes is a container orchestration tool.
+
+Struture:
+  - UI/CLI -> API: API to access the master node
+    - Master Node: The server that manages the worker nodes
+      - Worker Node: These servers run the applications and services
+        - Pod: A group of containers that share storage/networking, and specifications on how to run the containers
+        - Supervisord
+        - Docker
+        - Kubelet
+        - Kube-Proxy
+        - Fluentd
+        
+- Pods: (Pods are a group of one or more containers (Dockers containers for example))
+  - Containers within a pod share an IP address and port space and can find eachother on localhost.
+  - Containers can also communicate using IPC (SysV semaphores, POSIX shared mem).
+  - Containers in different pods have distinct IP addresses and can't communicate with IPC without special configuration.
+  - Containers from different pods usually communicate with eachother using the IP addresses of each pod
+  - Applications in a pod have access to shared volumes, which are part of the pod and can be mounted by each app.
+  - In Docker terms, a pod is modelled like a group of Doker containers with shared namespaces and shared FS volumes.
+  

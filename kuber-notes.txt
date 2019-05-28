@@ -31,5 +31,5 @@ Struture:
     containers such as process management and resource monitoring.
   - Decoupling software dependencies. Individual containers can be versioned, rebuilt and redeployed inependently.
   - Users dont need to worry about watching app signals or run their own process managers.
-  - Efficiency. Because the containers are not holdng all the responsibility they can be lightweight.
+  - Efficiency. Because the containers are not holding all the responsibility, they can be lightweight.
   

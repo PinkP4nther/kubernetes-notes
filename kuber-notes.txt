@@ -33,3 +33,4 @@ Struture:
   - Users dont need to worry about watching app signals or run their own process managers.
   - Efficiency. Because the containers are not holding all the responsibility, they can be lightweight.
   
+EKS - (What is it? How does it work?)
